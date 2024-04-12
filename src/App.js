@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import championData from "./championFull.json";
 import Button from "react-bootstrap/Button";
