@@ -15,15 +15,13 @@ permissions:
     pages: write
     id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-    group: "pages"
-    cancel-in-progress: false
-
 jobs:
     deploy:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-22.04
+        permissions:
+            contents: write
+        concurrency:
+            group: ${{ github.workflow }}-${{ github.ref }}
         steps:
             - name: Checkout
               uses: actions/checkout@v3
@@ -31,7 +29,7 @@ jobs:
             - name: Setup Node.js
               uses: actions/setup-node@v3
               with:
-                  node-version: "16"
+                  node-version: "14"
 
             - name: Cache dependencies
               uses: actions/cache@v3
@@ -41,13 +39,12 @@ jobs:
                   restore-keys: |
                       ${{ runner.os }}-node-
 
-            - name: Install and Build
-              run: |
-                  npm ci
-                  npm run build
+            - run: npm ci
+            - run: npm run build
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v4
+              if: github.ref == 'refs/heads/main'
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./build
