@@ -1,8 +1,14 @@
-# Getting Started with Create React App
+# LoL Kit Randomizer
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This is a (quick and messy) little React app to generate a random League of Legends ability loadout. I was inspired by [This Tweet](https://twitter.com/LeagueOfLegends/status/1776319927219372121).
+
+The current patch this program has assets for is 14.7.1
+
+To update the assets, download the latest Data Dragon tarball from the [League of Legends developer docs](https://developer.riotgames.com/docs/lol), replace `\src\championFull.json` with `[patch]\data\[language]\championFull.json` and `\src\spell` with `[patch]\img\spell`
+
+## Available Scripts (This is all default from c-r-a)
 
 In the project directory, you can run:
 
