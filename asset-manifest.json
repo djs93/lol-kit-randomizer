@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.4ca494e5.css",
-    "main.js": "/static/js/main.803199cb.js",
-    "static/js/453.a29372ca.chunk.js": "/static/js/453.a29372ca.chunk.js",
-    "index.html": "/index.html",
-    "main.4ca494e5.css.map": "/static/css/main.4ca494e5.css.map",
-    "main.803199cb.js.map": "/static/js/main.803199cb.js.map",
-    "453.a29372ca.chunk.js.map": "/static/js/453.a29372ca.chunk.js.map"
+    "main.css": "/lol-kit-randomizer/static/css/main.4ca494e5.css",
+    "main.js": "/lol-kit-randomizer/static/js/main.bbe2df2a.js",
+    "static/js/453.a29372ca.chunk.js": "/lol-kit-randomizer/static/js/453.a29372ca.chunk.js",
+    "index.html": "/lol-kit-randomizer/index.html",
+    "main.4ca494e5.css.map": "/lol-kit-randomizer/static/css/main.4ca494e5.css.map",
+    "main.bbe2df2a.js.map": "/lol-kit-randomizer/static/js/main.bbe2df2a.js.map",
+    "453.a29372ca.chunk.js.map": "/lol-kit-randomizer/static/js/453.a29372ca.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4ca494e5.css",
-    "static/js/main.803199cb.js"
+    "static/js/main.bbe2df2a.js"
   ]
 }
